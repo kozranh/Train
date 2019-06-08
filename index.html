@@ -1,0 +1,47 @@
+<html>
+
+<head>
+   <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+
+   <h3>Current Train Schedule</h2>
+      <table id="sTable">
+         <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency (min)</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+         </tr>
+      </table>
+      <br><br>
+      <h3>Add Train</h3>
+      <b>Train Name</b><br>
+      <input id="name" type="text"><br><br>
+      <b>Destination Name</b><br>
+      <input id="dest" type="text"><br><br>
+      <b>First Train Time(HH:mm - military time)</b><br>
+      <input id="first" type="text"><br><br>
+      <b>Frequency (min)</b><br>
+      <input id="freq" type="text"><br><br>
+      <Button onclick="addTrain()">Submit</Button>
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+      <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
+
+
+      <script src="init-firebase.js"></script>
+      <script type="text/javascript" src="index.js"></script>
+      <script type="text/javascript" src="moment-with-locales.min.js"></script>
+      <script>
+         loadBody();
+      </script>
+</body>
+
+</html>
